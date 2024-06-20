@@ -12,16 +12,16 @@ pub fn build(b: *std.Build) void {
     module.link_libc = true;
 
     if (target.result.os.tag == .windows) {
-        module.addSystemIncludePath(b.path("windows.h"));
+        module.addIncludePath(b.path("windows.h"));
     } else if (target.result.os.tag == .macos) {
-        module.addSystemIncludePath(b.path("CoreGraphics/CoreGraphics.h"));
+        module.addIncludePath(b.path("CoreGraphics/CoreGraphics.h"));
     } else {
         // NOTE: I'll likely need to ship both X11 and Wayland in this project.
         //       A Linux binary must have both compiled in for it to work.
         //       I shall look into using Mach Core's X11 and Wayland mirrors
 
         // module.addSystemIncludePath("wayland-client.h");
-        module.addSystemIncludePath(b.path("xdo.h"));
+        module.addIncludePath(b.path("xdo.h"));
     }
 
     const tests = b.addTest(.{
