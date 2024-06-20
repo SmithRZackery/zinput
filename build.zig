@@ -10,7 +10,7 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     module.link_libc = true;
-    module.addIncludePath(b.path("xdo.h"));
+    module.linkSystemLibrary("xdo.h", .{});
 
     const tests = b.addTest(.{
         .root_source_file = b.path("src/root.zig"),
