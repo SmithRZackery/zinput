@@ -6,6 +6,8 @@ pub const MouseButton = backend.MouseButton;
 pub const MouseButtonState = backend.MouseButtonState;
 pub const MousePosition = backend.MousePosition;
 
-test {
-    std.testing.refAllDecls(@This());
+test "zinput: refAllDecls" {
+    std.testing.refAllDecls(backend);
+
+    std.debug.print("PASSED\n", .{});
 }
