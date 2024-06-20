@@ -20,7 +20,7 @@
 *To be filled in later*
 
 # Platform Support
-As cool as it would be to have 100% bug free code, it's sadly not a reality. As such I've written up a table containing what Zinput *does and does not* support as of today.
+As cool as it would be to have 100% bug free, synonymous code, it's sadly not a reality. As such I've written up a table containing what Zinput *does and does not* support as of today.
 
 <center>
 
